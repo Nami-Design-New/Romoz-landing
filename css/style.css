@@ -142,6 +142,13 @@ header nav .container .buttons a {
   font-weight: 500;
   border-radius: 4px;
 }
+@media (max-width: 576px) {
+  header nav .container .buttons a {
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+}
 header nav .container .buttons a::after {
   content: "";
   background-color: #007299;
@@ -162,6 +169,21 @@ header nav .container .buttons a:hover {
 }
 header nav .container .buttons a:hover::after {
   width: 100%;
+}
+header nav .container .buttons button {
+  outline: none;
+  border: none;
+  background: none;
+  display: none;
+}
+header nav .container .buttons button i {
+  font-size: 22px;
+  color: #007299;
+}
+@media (max-width: 768px) {
+  header nav .container .buttons button {
+    display: flex;
+  }
 }
 
 .hero-section {
@@ -391,6 +413,11 @@ footer {
 }
 footer .container .col-12 {
   padding: 42px 32px 24px;
+}
+@media (max-width: 576px) {
+  footer .container .col-12 {
+    padding: 24px;
+  }
 }
 footer .container .col-12:last-child {
   padding: 24px 0;

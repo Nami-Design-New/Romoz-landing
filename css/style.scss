@@ -167,6 +167,11 @@ header {
           position: relative;
           font-weight: 500;
           border-radius: 4px;
+          @media (max-width: 576px) {
+            padding: 0 8px;
+            font-size: 12px;
+            line-height: 30px;
+          }
           &::after {
             content: '';
             background-color: #007299;
@@ -187,6 +192,19 @@ header {
             &::after {
               width: 100%;
             }
+          }
+        }
+        button {
+          outline: none;
+          border: none;
+          background: none;
+          display: none;
+          i {
+            font-size: 22px;
+            color: #007299;
+          }
+          @media (max-width: 768px) {
+            display: flex;
           }
         }
       }
@@ -414,6 +432,9 @@ footer {
   background: #f3f3f9;
   .container .col-12 {
     padding: 42px 32px 24px;
+    @media (max-width: 576px) {
+      padding: 24px;
+    }
     &:last-child {
       padding: 24px 0;
     }
