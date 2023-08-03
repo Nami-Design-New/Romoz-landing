@@ -46,3 +46,45 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+// animate counting
+let numbers = document.querySelectorAll(".num");
+let started = false;
+function startCount(element) {
+  let goal = element.dataset.goal;
+  let count = setInterval(() => {
+    element.textContent++;
+    if (element.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 3000 / goal);
+}
+window.onscroll = function() {
+  if (this.scrollY >= document.querySelector(".parteners").offsetTop - 200) {
+    if (!started) {
+      numbers.forEach(num => startCount(num));
+    }
+    started = true;
+  }
+};
+//accordion show hide
+let btn = document.querySelector(".showbtn");
+let acc = document.querySelector("#accordionExample");
+btn.addEventListener("click", () => {
+  acc.classList.toggle("show");
+  if (acc.classList.contains("show")) {
+    btn.innerHTML = `عرض اقل <i class="fa-sharp fa-solid fa-chevron-up"></i>`;
+  } else {
+    btn.innerHTML = `عرض المزيد <i class="fa-sharp fa-solid fa-chevron-down"></i>`;
+  }
+});
+//nav toggler
+let toggler = document.querySelector("#toggle");
+toggler.addEventListener("click", () => {
+  document.querySelector(".nav-links").classList.toggle("active");
+  if (document.querySelector(".nav-links").classList.contains("active")) {
+    toggler.querySelector("i").classList =
+      "fa-sharp fa-solid fa-bars-staggered";
+  } else {
+    toggler.querySelector("i").classList = "fa-sharp fa-solid fa-bars";
+  }
+});

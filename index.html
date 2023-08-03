@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <a class="whatsappButton" href="https://wa.me/">
+        <img src="images/whatsappbrand.svg" alt="">
+    </a>
     <!-- Header Start-->
     <header class="navigationbar">
         <nav>
@@ -35,9 +38,9 @@
                     </li>
                 </ul>
                 <div class="buttons">
-                    <a href="tel:011-293-8888">011-293-8888 <i class="fa-sharp fa-solid fa-headset"></i></a>
+                    <a href="tel:011-293-8888"><i class="fa-sharp fa-solid fa-headset"></i></a>
                     <a href="#!">EN</a>
-                    <button><i class="fa-sharp fa-solid fa-bars-staggered"></i></button>
+                    <a href="javascript:void(0)" id="toggle"><i class="fa-sharp fa-solid fa-bars"></i></a>
                 </div>
             </div>
         </nav>
@@ -98,6 +101,133 @@
                 </div>
             </div>
         </div>
+        <div class="counter-wrapper">
+            <div class="underlay"></div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-3 col-6 mb-lg-0 mb-4">
+                        <div class="icon">
+                            <img src="images/users.svg" alt="icon">
+                        </div>
+                        <h4><span class="num" data-goal="8">0</span>k+</h4>
+                        <h5>مستخدمين النظام</h5>
+                    </div>
+                    <div class="col-lg-3 col-6 mb-lg-0 mb-4">
+                        <div class="icon">
+                            <img src="images/heart.svg" alt="icon">
+                        </div>
+                        <h4><span class="num" data-goal="25">0</span>k+</h4>
+                        <h5>تقييمات ايجابيه</h5>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="icon">
+                            <img src="images/experience.svg" alt="icon">
+                        </div>
+                        <h4><span class="num" data-goal="15">0</span>+</h4>
+                        <h5>سنين الخبره</h5>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="icon">
+                            <img src="images/earth.svg" alt="icon">
+                        </div>
+                        <h4><span class="num" data-goal="12">0</span>+</h4>
+                        <h5>الدول التى نخدمها</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- faqs -->
+    <section class="faqs">
+        <div class="container">
+            <div class="row align-items-center justify-content-around">
+                <div class="col-lg-6 col-12 p-3 faqs-content">
+                    <h3>الأسئلة الشائعة <i class="fa-sharp fa-solid fa-question"></i></h3>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    الفئة المُستهدفة في منصة رموز
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>تهتم سمات بتقديم كافة الخدمات وتلبية كافة احتياجات أصحاب الأملاك العقارية أو
+                                        الموكلين بإدارتها</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    تسعير الاشتراكات
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>تكون الأسعار بحسب الباقة المُختارة من حيث المزايا والخدمات المُرادة في المنصة،
+                                        بالإضافة إلى ذلك...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ما هي الخدمات المقدمة من خلال النظام؟
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>تكون الأسعار بحسب الباقة المُختارة من حيث المزايا والخدمات المُرادة في المنصة،
+                                        بالإضافة إلى ذلك...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    هل تدعم المنصة المرفقات؟
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>تدعم المنصة المرفقات كالصور، حيث من الممكن للعميل إضافة صور للعقارات وغيرها.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    هل من الممكن استخدام المنصة لأكثر من شخص وهل يمكن الحد من الصلاحيات لكل مستخدم؟
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>يختلف بحسب الباقة المطلوبة، ففي باقة العقاري تكون إمكانية الاستخدام متاحة فقط
+                                        لشخص واحد، أما الباقات الأخرى توفر إمكانية استخدام لأكثر من شخص.
+                                        ومن الجدير بالذكر انه من الممكن إعطاء صلاحيات مختلفة لكل مستخدم والتحكم بالشاشات
+                                        الظاهرة لهم وذلك من خلال التواصل مع فريق الدعم الفني الخاص بنا.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="showbtn">عرض المزيد <i class="fa-sharp fa-solid fa-chevron-down"></i></button>
+                </div>
+                <div class="col-lg-6 col-12 pe-lg-5 ps-lg-5 p-0 faq-img">
+                    <img src="images/faq2.svg" alt="faq">
+                </div>
+            </div>
+        </div>
     </section>
     <!-- services section -->
     <section class="services-section sec" id="service">
@@ -111,7 +241,7 @@
                             <div class="col-12">
                                 <div class="shaded_card">
                                     <div class="img">
-                                        <a href="images/app-img-2.jpg" data-fancybox="income-outcome">
+                                        <a href="images/app-img-2.jpg" data-fancybox="app-images">
                                             <img src="images/app-img-2.jpg" alt="">
                                         </a>
                                     </div>
@@ -121,7 +251,7 @@
                             <div class="col-12 mt-4">
                                 <div class="shaded_card">
                                     <div class="img">
-                                        <a href="images/app-img-3.jpg" data-fancybox="statics">
+                                        <a href="images/app-img-3.jpg" data-fancybox="app-images">
                                             <img src="images/app-img-3.jpg" alt="">
                                         </a>
                                     </div>
@@ -135,7 +265,7 @@
                     <div class="container p-0">
                         <div class="shaded_card">
                             <div class="img">
-                                <a href="images/app-img-1.jpg" data-fancybox="interface">
+                                <a href="images/app-img-1.jpg" data-fancybox="app-images">
                                     <img src="images/app-img-1.jpg" alt="">
                                 </a>
                             </div>
@@ -152,7 +282,7 @@
                             <div class="col-12">
                                 <div class="shaded_card">
                                     <div class="img">
-                                        <a href="images/app-img-4.jpg" data-fancybox="trading">
+                                        <a href="images/app-img-4.jpg" data-fancybox="app-images">
                                             <img src="images/app-img-4.jpg" alt="">
                                         </a>
                                     </div>
@@ -163,7 +293,7 @@
                                 <div class="col-12">
                                     <div class="shaded_card">
                                         <div class="img">
-                                            <a href="images/app-img-5.jpg" data-fancybox="statics2">
+                                            <a href="images/app-img-5.jpg" data-fancybox="app-images">
                                                 <img src="images/app-img-5.jpg" alt="">
                                             </a>
                                         </div>

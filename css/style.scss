@@ -24,6 +24,14 @@ a {
 :target {
   scroll-margin-top: 100px;
 }
+.fancybox__container {
+  z-index: 1999;
+}
+.fancybox__track,
+.fancybox__content,
+.carousel__track {
+  direction: ltr !important;
+}
 $black: #161616;
 $main: #0f70e5;
 $white: #fff;
@@ -84,18 +92,32 @@ $light_gray: #c4c4c4;
   outline: none;
 }
 // **************************** //
+.whatsappButton {
+  position: fixed;
+  bottom: 8px;
+  left: 8px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-height: 48px;
+  }
+}
 header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent;
+  background: #fff;
   z-index: 999;
   transition: all .3s ease-in-out;
   &.scrolled {
     position: sticky !important;
     top: 0;
-    background: #fff;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   nav {
@@ -111,13 +133,30 @@ header {
         display: flex;
         gap: 32px;
         @media (max-width: 768px) {
-          display: none;
+          display: flex;
+          flex-direction: column;
+          background: white;
+          width: 100%;
+          top: 100px;
+          left: -100%;
+          height: calc(100vh - 100px);
+          justify-content: center;
+          position: absolute;
+          z-index: 9999999;
+          gap: 24px;
+          transition: .5s ease-in-out;
+          &.active {
+            left: 0;
+          }
         }
         li {
           display: flex;
           align-items: center;
           justify-content: center;
           height: 100%;
+          @media (max-width: 768px) {
+            height: 70px;
+          }
           .nav-link {
             color: #000;
             font-size: 14px;
@@ -161,15 +200,26 @@ header {
         a {
           border: 1px solid #007299;
           color: #007299;
-          padding: 0 10px;
-          font-size: 14px;
+          font-size: 16px;
           transition: .3s ease-in-out;
           position: relative;
           font-weight: 500;
           border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          &:last-child {
+            display: none;
+            @media (max-width: 768px) {
+              display: flex;
+            }
+          }
+          i {
+            line-height: 34px;
+          }
           @media (max-width: 576px) {
-            padding: 0 8px;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 30px;
           }
           &::after {
@@ -192,19 +242,6 @@ header {
             &::after {
               width: 100%;
             }
-          }
-        }
-        button {
-          outline: none;
-          border: none;
-          background: none;
-          display: none;
-          i {
-            font-size: 22px;
-            color: #007299;
-          }
-          @media (max-width: 768px) {
-            display: flex;
           }
         }
       }
@@ -323,6 +360,92 @@ header {
       }
     }
   }
+  .counter-wrapper {
+    height: 380px;
+    width: 100%;
+    background: #d2edf876;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      height: 420px;
+    }
+    .underlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/building-parallax-img.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100%;
+      opacity: .1;
+      z-index: -1;
+    }
+    .col-6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #007299;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-height: 40px;
+      }
+    }
+    h4 {
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+    h5 {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  }
+}
+.faqs {
+  padding: 30px 0;
+  .faqs-content {
+    padding-top: 60px;
+    h3 {
+      font-size: 20px;
+      color: #007299;
+      font-weight: 600;
+      margin-bottom: 28px;
+      i {
+        transform: scaleX(-1);
+      }
+    }
+    .accordion .accordion-item:nth-child(n + 5) {
+      display: none;
+      transition: all .5s ease-in-out;
+    }
+    .accordion.show .accordion-item:nth-child(n + 5) {
+      display: block;
+    }
+    .showbtn {
+      border: none;
+      outline: none;
+      background: none;
+      color: #007299;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+  }
 }
 .services-section {
   padding: 30px 0;
@@ -409,6 +532,9 @@ header {
         width: 100%;
         outline: none;
         font-size: 14px;
+        border-radius: 4px;
+        border: solid 1px #ccc;
+        transition: .3s ease-in-out;
       }
       textarea {
         width: 100%;
@@ -416,6 +542,15 @@ header {
         font-size: 14px;
         padding: 16px;
         outline: none;
+        border-radius: 4px;
+        border: solid 1px #ccc;
+        transition: .3s ease-in-out;
+      }
+      input,
+      textarea {
+        &:focus {
+          border-color: #0f70e5;
+        }
       }
     }
     button {
@@ -425,6 +560,7 @@ header {
       outline: none;
       background: #007299;
       color: #fff;
+      border-radius: 4px;
     }
   }
 }
@@ -496,4 +632,31 @@ footer {
       }
     }
   }
+}
+.accordion-button {
+  text-align: inherit;
+}
+.accordion-button,
+.accordion-body {
+  padding: 16px 0 !important;
+}
+.accordion-button:not(.collapsed) {
+  background: none !important;
+}
+.accordion-button::after {
+  margin-right: auto !important;
+  margin-left: initial;
+}
+.accordion-button:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.accordion-item {
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-bottom: 1px solid #d7d7d7 !important;
+  border-radius: 0 !important;
+  margin: 16px 0 !important;
 }
