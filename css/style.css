@@ -496,7 +496,7 @@ header nav .container .buttons a:hover::after {
   background: #d2edf8;
   position: absolute;
   left: -80px;
-  top: 0;
+  top: 50px;
   z-index: -1;
 }
 .features .circle2 {
