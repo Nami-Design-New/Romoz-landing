@@ -88,3 +88,9 @@ toggler.addEventListener("click", () => {
     toggler.querySelector("i").classList = "fa-sharp fa-solid fa-bars";
   }
 });
+let links = document.querySelectorAll(".nav-link");
+links.forEach(l => {
+  l.addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.remove("active");
+  });
+});
