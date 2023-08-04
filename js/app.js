@@ -6,16 +6,12 @@ window.addEventListener("scroll", () => {
     : bar.classList.add("scrolled");
 });
 //parteners slider
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".partenersSwiper", {
   spaceBetween: 20,
   grabCursor: true,
   loop: true,
   autoplay: true,
   autoplayTimeout: 3000,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
   breakpoints: {
     992: {
       slidesPerView: 5
@@ -93,4 +89,24 @@ links.forEach(l => {
   l.addEventListener("click", () => {
     document.querySelector(".nav-links").classList.remove("active");
   });
+});
+//testmonials slider
+var swiperX = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 50,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3
+    },
+    768: {
+      slidesPerView: 2
+    },
+    350: {
+      slidesPerView: 1
+    }
+  }
 });
