@@ -485,6 +485,103 @@ header nav .container .buttons a:hover::after {
   margin: 0;
 }
 
+.packages {
+  margin: 48px 0;
+  padding: 42px 0;
+  position: relative;
+}
+.packages svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.packages .txt {
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+.packages .hed {
+  font-weight: 600;
+  color: #007299;
+  text-align: center;
+}
+.packages .package-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px 24px;
+  height: 360px;
+  position: relative;
+}
+.packages .package-card.p2::after {
+  content: "\f005";
+  font-family: "Font Awesome 6 Pro";
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  top: 24px;
+  font-size: 20px;
+  color: #0f70e5;
+}
+.packages .package-card .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.packages .package-card .title h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+.packages .package-card .title .price {
+  font-size: 24px;
+  color: #0f70e5;
+  font-weight: bold;
+  margin: 0;
+}
+.packages .package-card p {
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  margin: 0;
+}
+.packages .package-card a {
+  border: 1px solid #0f70e5;
+  color: #0f70e5;
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 2px 0;
+  align-self: flex-start;
+}
+.packages .package-card a span {
+  color: #0f70e5;
+}
+.packages .package-card a:hover {
+  border-color: transparent;
+  background: #0f70e5;
+}
+.packages .package-card a:hover span {
+  color: #fff;
+}
+.packages .package-card a:hover::after {
+  width: 100%;
+}
+
 .features {
   padding: 60px 0;
   position: relative;
@@ -830,8 +927,8 @@ footer .social-media a:hover i {
 }
 
 .swiper-pagination-bullet-active {
-  border-color: #56e0e0;
+  border-color: #007299;
 }
 .swiper-pagination-bullet-active::after {
-  background: #56e0e0;
+  background: #007299;
 }/*# sourceMappingURL=style.css.map */
