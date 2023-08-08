@@ -268,14 +268,14 @@ header nav .container .buttons a:hover::after {
   font-weight: 600;
   line-height: 1.6;
   margin: 36px 0;
-  font-size: 48px;
+  font-size: 44px;
   color: #000;
 }
 @media (max-width: 576px) {
   .hero-section .row .text-container h1 {
     font-size: 32px;
     margin: 16px 0;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 }
 .hero-section .row .text-container h1 span {
@@ -516,6 +516,7 @@ header nav .container .buttons a:hover::after {
 .packages {
   margin: 48px 0;
   padding: 42px 0;
+  overflow-x: hidden;
   position: relative;
 }
 .packages svg {

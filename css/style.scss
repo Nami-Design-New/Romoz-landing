@@ -284,12 +284,12 @@ header {
         font-weight: 600;
         line-height: 1.6;
         margin: 36px 0;
-        font-size: 48px;
+        font-size: 44px;
         color: #000;
         @media (max-width: 576px) {
           font-size: 32px;
           margin: 16px 0;
-          line-height: 1.5;
+          line-height: 1.4;
         }
         span {
           color: #007299;
@@ -532,6 +532,7 @@ header {
 .packages {
   margin: 48px 0;
   padding: 42px 0;
+  overflow-x: hidden;
   position: relative;
   svg {
     position: absolute;
