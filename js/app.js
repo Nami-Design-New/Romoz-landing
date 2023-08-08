@@ -7,20 +7,20 @@ window.addEventListener("scroll", () => {
 });
 //parteners slider
 let swiper = new Swiper(".partenersSwiper", {
-  spaceBetween: 20,
+  spaceBetween: 50,
   grabCursor: true,
   loop: true,
   autoplay: true,
-  autoplayTimeout: 3000,
+  autoplayTimeout: 5000,
   breakpoints: {
     992: {
-      slidesPerView: 5
+      slidesPerView: 2
     },
     768: {
-      slidesPerView: 3
+      slidesPerView: 2
     },
     350: {
-      slidesPerView: 2
+      slidesPerView: 1
     }
   }
 });

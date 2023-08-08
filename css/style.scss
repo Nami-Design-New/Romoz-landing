@@ -108,7 +108,7 @@ $light_gray: #c4c4c4;
   }
 }
 header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -116,8 +116,6 @@ header {
   z-index: 999;
   transition: all .3s ease-in-out;
   &.scrolled {
-    position: sticky !important;
-    top: 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   nav {
@@ -126,7 +124,7 @@ header {
     .container {
       padding: 10px;
       .navbar-brand img {
-        max-height: 80px;
+        width: 55px;
       }
       .nav-links {
         height: 80px;
@@ -251,7 +249,7 @@ header {
 }
 .hero-section {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 100px);
   position: relative;
   @media (max-width: 992px) {
     height: fit-content;
@@ -356,7 +354,7 @@ header {
         align-items: center;
         justify-content: center;
         img {
-          max-height: 160px;
+          max-height: 70px;
         }
       }
     }
@@ -417,6 +415,17 @@ header {
 }
 .faqs {
   padding: 30px 0;
+  &.faq-page {
+    .faqs-content {
+      .accordion .accordion-item:nth-child(n + 5) {
+        display: block !important;
+        transition: all .5s ease-in-out;
+      }
+      .accordion .accordion-item:last-child {
+        border: 0 !important;
+      }
+    }
+  }
   .faqs-content {
     padding-top: 60px;
     h3 {
@@ -498,17 +507,38 @@ header {
     }
   }
 }
+.privacy-policy {
+  padding: 40px 0;
+  br {
+    line-height: 24px !important;
+  }
+  h3 {
+    font-size: 20px;
+    color: #007299;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  p {
+    font-size: 15px;
+    color: #484848;
+  }
+  h6{
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+}
 .packages {
   margin: 48px 0;
   padding: 42px 0;
   position: relative;
-  svg{
+  svg {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
   }
-  //background: #f7f6fc;
   .txt {
     text-align: center;
     color: #000;
@@ -531,7 +561,7 @@ header {
     padding: 32px 24px;
     height: 360px;
     position: relative;
-    &.p2::after{
+    &.p2::after {
       content: '\f005';
       font-family: "Font Awesome 6 Pro";
       border-radius: 50%;
@@ -849,8 +879,9 @@ footer {
       align-items: center;
       gap: 4px;
       a {
+        color: #007299;
         img {
-          max-height: 18px !important;
+          width: 36px;
         }
       }
     }
