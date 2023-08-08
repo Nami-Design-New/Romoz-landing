@@ -62,17 +62,7 @@ window.onscroll = function() {
     started = true;
   }
 };
-//accordion show hide
-let btn = document.querySelector(".showbtn");
-let acc = document.querySelector("#accordionExample");
-btn.addEventListener("click", () => {
-  acc.classList.toggle("show");
-  if (acc.classList.contains("show")) {
-    btn.innerHTML = `عرض اقل <i class="fa-sharp fa-solid fa-chevron-up"></i>`;
-  } else {
-    btn.innerHTML = `عرض المزيد <i class="fa-sharp fa-solid fa-chevron-down"></i>`;
-  }
-});
+
 //nav toggler
 let toggler = document.querySelector("#toggle");
 toggler.addEventListener("click", () => {
